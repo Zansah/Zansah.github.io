@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #FFFFFF;
     margin: 0;
     padding: 0;
     display: flex; 
@@ -10,8 +10,76 @@ body {
 
 .content {
     flex: 1; 
-    padding: 20px;
+    padding: 0px;
+    
+
 }
+.golden-line-above-middle {
+    height: 5px;
+    background-color: #BF9553;
+    width: 100%;
+}
+
+.middle-row {
+    background-color: #522888;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFF0;
+}
+.second-middle-row{
+    background-color:#3C1F5B;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFF0;
+
+}
+.button-row {
+    display: flex;
+}
+
+.button {
+    background-color: #BF9553;
+    color: #FFFFF0;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    width:25%;
+    height: 55px;
+
+    
+}
+.button:hover{
+    background-color: rgb(203 182 119) ;
+    color: #3C1F5B;
+}
+
+
+
+.purple-box {
+    background-color: #522888;
+    padding: 20px;
+    margin-top: 20px; /* Adjust as needed */
+    width: 40%;
+    height: 400px;
+    margin-bottom: 200px;
+    margin-left: 20px;
+    border-bottom: 6px solid #B97F24;
+    box-shadow: 2px 2px 10px grey;
+    
+}
+
+
+
 
 .golden-line {
     height: 5px;
@@ -29,15 +97,16 @@ body {
 }
 
 .sub {
-    color: #FFFFFF;
+    color: #FFFFF0;
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
     margin-right: 3=800px;
 }
 
 .fa-instagram,
-.fa-linkedin {
-    color: #FFFFFF;
+.fa-linkedin,
+.fa-github {
+    color: #FFFFF0;
     text-align: center;
     font-size: 35px;
     margin-left: 20px;
@@ -46,7 +115,8 @@ body {
 }
 
 .fa-instagram:hover,
-.fa-linkedin:hover {
+.fa-linkedin:hover,
+.fa-github:hover{
     color: #BF9553;
 }
 
