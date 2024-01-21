@@ -1,124 +1,72 @@
 body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif;
-    height: 100vh; 
-    display: flex;
-    flex-direction: column;
-    background-color: #EDE1D2;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    color: black;
-}
-
-.name {
-    font-size: 24px;
-}
-
-.navigation {
-    display: flex;
-    gap: 20px;
-}
-
-.navigation a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
-
-.container {
-    display: flex;
-    flex: 1; 
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
 }
 
 .content {
     flex: 1; 
     padding: 20px;
-    color: black;
 }
 
-.green-block {
-    flex: 1; 
-    background-color: #183C28; 
-    padding: 25px;
-    color: #EEC643;
-    font-size: 22px;
+.golden-line {
+    height: 5px;
+    background-color: #BF9553;
+    width: 100%; 
 }
 
-.golden {
-    background-color: #EEC643;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    color: black;
-    width: 75px;
-    height: 30px;
+.purple-row {
+    background-color: #522888;
+    height: 100px; 
+    width: 100%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
 }
 
-.skills {
-    padding-left: 350px;
-}
-
-.text {
-    width: 400px;
-}
-
-.right-box {
-    display: flex;
-    width: 300px;
-    height: 400px;
-    background-color: #183C28; 
-    position: fixed;
-    top: 200px;
-    right: 25px;
-    flex-direction: column;
-}
-
-.right-box-top {
-    flex: 1; 
-    background-color: #183C28; 
-}
-
-.right-box-bottom {
-    flex: 0.7; 
-    background-color: black; 
-}
-
-.coding {
+.sub {
     color: #FFFFFF;
-    font-size: 16px;
-    padding-left: 400px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-right: 3=800px;
 }
 
+.fa-instagram,
+.fa-linkedin {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 35px;
+    margin-left: 20px;
+    margin-right: 20px;
 
-@media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
+}
 
-    .skills {
-        padding-left: 0;
-        text-align: center;
-    }
+.fa-instagram:hover,
+.fa-linkedin:hover {
+    color: #BF9553;
+}
 
-    .text {
-        width: 100%;
-    }
+.darker-purple {
+    background-color: #3C1F5B; 
+    height: 75px; 
+    width: 100%; 
+    padding: none;
+    display: flex; 
+    align-items: center;
+    
+}
 
-    .right-box {
-        position: relative;
-        top: auto;
-        right: auto;
-        width: 100%;
-    }
+.contact {
+    color: #BF9553;
+    text-align: center;
+    text-decoration: none;
+}
 
-    .coding {
-        padding-left: 0;
-        text-align: center;
-    }
+.contact:hover {
+    text-decoration: underline;
+    color: #BF9553;
 }
