@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    display: flex;
+    height: 100vh; /* Full height of the viewport */
+}
+
+.top-bar{
+    /* change this later to a better color */
+    position: fixed;
+    width:72.6%;
+    height: 50px;
+    top: 0;
+    background-color: #f0f0f0;
+    color:black;
+    font-size: 25px; 
+    font-family: 'Arial', Courier, monospace;
+    padding-left: 10px;
+    padding-top: 20px;
+    
+    
+}
+#color{
+    color:black;
+    font-size: 15px;
+
+}
+#circle{
+    border-radius: 50%;
+    margin-top: 20px;
+    width: 100px;
+    height: 100px;
+    margin-left:15%;
+}
+.left-section {
+    margin-top: 5%;
+    font-family: 'Arial', Courier, monospace;
+    flex: .75; /* Takes up 1/2 of the available space */
+    background-color: #f0f0f0;
+    padding: 20px;
+    font-size: 15px;
+}
+.middle-section {
+    margin-top: 5%;
+    font-family: 'Arial', Courier, monospace;
+    flex: .75;
+    background-color: #f0f0f0;
+    font-size: 12px;
+    padding:20px
+    
+}
+
+.right-section {
+    font-family: 'Arial', Courier, monospace;
+    flex: .50; /* Takes up 1/2 of the available space */
+    background-color: #e0e0e0;
+    padding: 20px;
+    font-size: 12px;
+}
+
+
+
+
