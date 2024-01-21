@@ -1,62 +1,95 @@
 body {
     margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    height: 100vh; 
     display: flex;
-    height: 100vh; /* Full height of the viewport */
+    flex-direction: column;
+    background-color:#EDE1D2;
 }
 
-.top-bar{
-    /* change this later to a better color */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: black;
+}
+
+.name {
+    font-size: 24px;
+}
+
+.navigation {
+    display: flex;
+    gap: 20px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex: 1; 
+}
+
+.content {
+    flex: 1; 
+    padding: 20px;
+    color: black;
+}
+
+.green-block {
+    flex: 1; 
+    background-color: #183C28; 
+    padding: 25px;
+    color: #EEC643;
+    font-size: 22px;
+}
+.golden{
+    background-color:#EEC643 ;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    color: black;
+    width:75px;
+    height: 30px;
+}
+.skills{
+    padding-left: 350px;
+}
+
+.text{
+    width: 400px;
+}
+
+.right-box {
+    display: flex;
+    width: 300px;
+    height: 400px;
+    background-color: #183C28; 
     position: fixed;
-    width:72.6%;
-    height: 50px;
-    top: 0;
-    background-color: #f0f0f0;
-    color:black;
-    font-size: 25px; 
-    font-family: 'Arial', Courier, monospace;
-    padding-left: 10px;
-    padding-top: 20px;
+    top: 200px;
+    right: 25px;
+    flex-direction: column;
     
     
 }
-#color{
-    color:black;
-    font-size: 15px;
-
-}
-#circle{
-    border-radius: 50%;
-    margin-top: 20px;
-    width: 100px;
-    height: 100px;
-    margin-left:15%;
-}
-.left-section {
-    margin-top: 5%;
-    font-family: 'Arial', Courier, monospace;
-    flex: .75; /* Takes up 1/2 of the available space */
-    background-color: #f0f0f0;
-    padding: 20px;
-    font-size: 15px;
-}
-.middle-section {
-    margin-top: 5%;
-    font-family: 'Arial', Courier, monospace;
-    flex: .75;
-    background-color: #f0f0f0;
-    font-size: 12px;
-    padding:20px
-    
+.right-box-top {
+    flex: 1; 
+    background-color: #183C28; 
 }
 
-.right-section {
-    font-family: 'Arial', Courier, monospace;
-    flex: .50; /* Takes up 1/2 of the available space */
-    background-color: #e0e0e0;
-    padding: 20px;
-    font-size: 12px;
+.right-box-bottom{
+    flex: .70; 
+    background-color: black; 
 }
 
-
-
-
+.coding{
+    color: #FFFFFF;
+    font-size: 16px;
+    padding-left: 400px;
+}
