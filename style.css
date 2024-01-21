@@ -5,7 +5,7 @@ body {
     height: 100vh; 
     display: flex;
     flex-direction: column;
-    background-color:#EDE1D2;
+    background-color: #EDE1D2;
 }
 
 .header {
@@ -49,20 +49,22 @@ body {
     color: #EEC643;
     font-size: 22px;
 }
-.golden{
-    background-color:#EEC643 ;
+
+.golden {
+    background-color: #EEC643;
     border: none;
     border-radius: 15px;
     cursor: pointer;
     color: black;
-    width:75px;
+    width: 75px;
     height: 30px;
 }
-.skills{
+
+.skills {
     padding-left: 350px;
 }
 
-.text{
+.text {
     width: 400px;
 }
 
@@ -75,21 +77,48 @@ body {
     top: 200px;
     right: 25px;
     flex-direction: column;
-    
-    
 }
+
 .right-box-top {
     flex: 1; 
     background-color: #183C28; 
 }
 
-.right-box-bottom{
-    flex: .70; 
+.right-box-bottom {
+    flex: 0.7; 
     background-color: black; 
 }
 
-.coding{
+.coding {
     color: #FFFFFF;
     font-size: 16px;
     padding-left: 400px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .skills {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .right-box {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+    }
+
+    .coding {
+        padding-left: 0;
+        text-align: center;
+    }
 }
