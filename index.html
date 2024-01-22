@@ -24,14 +24,18 @@
         <div class="middle-row">
             <p>This is the middle row content.</p>
         </div>
-        <div class="second-middle-row">work</div>
+        <div class="second-middle-row"><iframe id="contentFrame" src="about_me.html" width="100%" height="100%" frameborder="0"></iframe></div>
         <div class="button-row">
-            <button class="button">About Me</button>
-            <button class="button">Skills</button>
-            <button class="button">Experience</button>
-            <button class="button">Education</button>
+            <button class="button" onclick="loadContent('about_me.html')">About Me</button>
+            <button class="button" onclick="loadContent('skills.html')">Skills</button>
+            <button class="button" onclick="loadContent('experience.html')">Experience</button>
+            <button class="button" onclick="loadContent('education.html')">Education</button>
         </div>
-        
+        <script>
+            function loadContent(url) {
+                document.getElementById('contentFrame').src = url;
+            }
+        </script>
        
     
     </div>
