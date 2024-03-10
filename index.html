@@ -5,31 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/f4efa66e1d.js" crossorigin="anonymous"></script>
-    <title>Your Webpage Title</title>
+    <title>Portfolio</title>
 </head>
 <body>
-    <div class="light-gray-row">
-        <span>Zephaniah Ansah / Portfolio</span>
-        <span>
-            <a href="#">Resume</a>
-            <a href="#">Projects</a>
-        </span>
+    <div class="first-row">
+        <h3>Zephaniah Ansah / Portfolio</h3>
+        <a class="odd" target="_blank" href="#">Resume</a>
+        <a class="even" target="_blank" href="#">Projects</a>
+        <a class="odd" target="_blank" href="#">Contacts</a>
     </div>
 
     <div class="content">
-        <h1>Hello, World!</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sed voluptate saepe voluptatum repellendus unde, eveniet laboriosam ex a repellat dolores ad, nisi fugit maiores aliquid consequuntur facilis praesentium iure.</p>
-
         <div class="golden-line-above-middle"></div>
         <div class="middle-row">
             <p>This is the middle row content.</p>
         </div>
         <div class="second-middle-row"><iframe id="contentFrame" src="about_me.html" width="100%" height="100%" frameborder="0"></iframe></div>
         <div class="button-row">
-            <button class="button" onclick="loadContent('about_me.html')">About Me</button>
-            <button class="button" onclick="loadContent('skills.html')">Skills</button>
-            <button class="button" onclick="loadContent('experience.html')">Experience</button>
-            <button class="button" onclick="loadContent('education.html')">Education</button>
+            <button class="button" onclick="loadContent('aboutme/about_me.html')">About Me</button>
+            <button class="button" onclick="loadContent('skills/skills.html')">Skills</button>
+            <button class="button" onclick="loadContent('experience/experience.html')">Experience</button>
+            <button class="button" onclick="loadContent('education/education.html')">Education</button>
         </div>
         <script>
             function loadContent(url) {
@@ -39,8 +35,11 @@
        
     
     </div>
+    
 
     <div class="golden-line"></div>
+
+
     
     <div class="purple-row">
         <h3 class="sub">Portfolio <span class="icons">
