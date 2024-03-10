@@ -7,6 +7,33 @@ body {
     flex-direction: column; 
     min-height: 100vh; 
 }
+.first-row {
+    color: #3C1F5B;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .first-row h3 {
+    margin: 10px; 
+  }
+  
+  .first-row a {
+    text-decoration: none;
+    padding: 5px;
+  }
+  
+  .odd {
+    color: #BF9553;
+  }
+  
+  .even {
+    color: #522888;
+  }
+  
+  
 
 .content {
     flex: 1; 
@@ -62,11 +89,6 @@ body {
     background-color: rgb(203 182 119) ;
     color: #3C1F5B;
 }
-
-
-
-
-
 
 
 .golden-line {
