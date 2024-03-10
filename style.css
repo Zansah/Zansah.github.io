@@ -90,6 +90,22 @@ body {
     color: #3C1F5B;
 }
 
+.project_box{
+    width: 300px;
+    height: 400px;
+    background-color: #FFFFFF;
+    margin: 10px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    box-shadow: 0px 0px 17px rgb(200, 200, 200);
+    border: 100px, solid #BF9553;
+}
+.project_header{
+    width:300px;
+    background-color: #522888;
+    height:65px;
+}
+
 
 .golden-line {
     height: 5px;
