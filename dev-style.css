@@ -273,6 +273,14 @@ body.dark-mode {
     font-size: 24px;
 }
 
+
+.info-box-container{
+    position: relative;
+    top: 0px;
+    left: 10px;
+    color: red;
+}
+
 @media screen and (max-width: 900px) {
     .fa-bars {
         display: block;
@@ -383,6 +391,6 @@ body.dark-mode {
 
 @media (max-width: 400px) {
     .discover {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 }
