@@ -389,10 +389,12 @@ body.dark-mode {
 
 }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
     .discover {
         grid-template-columns: repeat(1, 1fr);
-        position: relative;
-        left: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
