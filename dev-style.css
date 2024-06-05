@@ -389,7 +389,7 @@ body.dark-mode {
 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
     .discover {
         grid-template-columns: repeat(1, 1fr);
     }
