@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/f4efa66e1d.js" crossorigin="anonymous"></script>
+    <title>Connect</title>
+    <link rel="stylesheet" href="connect-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <i class="fa-solid fa-bars fa-2x" id="hamburger"></i>
+        <div class="slide-menu" id="slideMenu">
+            <button id="closeButton" class="close-button"><i class="fa-solid fa-x"></i></button>
+            <ul>
+                <li><button class="one"><a href="index.html">Home</a></button></li>
+                <li><button class="one"><a href="dev.html">Projects</a></button></li>
+                <li><button class="one"><a href="#">Resume</a></button></li>
+                <li><button class="one"><a href="#">CV</a></button></li>
+                <li><button class="one"><a href="contact.html">Connect</a></button></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="contact">
+        <div class="phone-container">
+            <div class="phone-screen">
+                <h3>Contact</h3>
+                <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                    <input type="hidden" name="access_key" value="439b3317-f85d-4b88-9620-fd1325985855">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">FIRST AND LAST NAME:</label>
+                            <input style="width:93%;"type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">YOUR EMAIL ADDRESS:</label>
+                            <input style="width:93%;" type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">MESSAGE:</label>
+                        <textarea style="width:93%;" id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+
+                <div class="phone-buttons">
+                    <a href="mailto:zansah31@gmail.com"><button><i class="fa-solid fa-envelope"></i></button></a>
+                    <a href="discordapp.com/users/824044512564215819"><button><i class="fa-brands fa-discord"></i></i></button></a>
+                    <a href="index.html"><img style="width: 100px;" src="_-6-removebg-preview.png" alt=""></a>
+                    <a href="https://www.linkedin.com/in/zephaniah-ansah-78b62b27a/"><button><i class="fa-brands fa-linkedin-in"></i></button></a>
+                    <a href="https://github.com/Zansah"><button><i class="fa-brands fa-github"></i></button></a>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactSection = document.getElementById('contact');
+            const contactHeading = contactSection.querySelector('.phone-header');
+
+            function checkScroll() {
+                const rect = contactSection.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    contactHeading.classList.add('slide-down');
+                    window.removeEventListener('scroll', checkScroll);
+                }
+            }
+
+            window.addEventListener('scroll', checkScroll);
+            checkScroll();
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
