@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f4efa66e1d.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    .main-header{
+        border-bottom: none;
+    }
+    .subheading-container {
+        position: fixed;
+        top: 80px; 
+        left: 0;
+        width: 100%;
+        background: white;
+        z-index: 998;
+        border-bottom: 1px solid #eaeaea;
+        overflow: hidden;
+    }
+
+    .subheading-nav {
+        display: flex;
+        padding: .5rem 2rem;
+        overflow-x: auto;
+        scrollbar-width: thin;
+        scrollbar-color: #ddd transparent;
+        -ms-overflow-style: none;
+    }
+
+    .subheading-nav::-webkit-scrollbar {
+        height: 3px;
+    }
+
+    .subheading-nav::-webkit-scrollbar-track {
+        background: none;
+    }
+
+    .subheading-nav::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 3px;
+    }
+
+    .subheading-nav::-webkit-scrollbar-thumb:hover {
+        background: #aaa;
+    }
+
+    .subheading-item {
+        padding: 0.5rem 1.2rem;
+        margin: 0 0.5rem;
+        background: white;
+        border-radius: 10px;
+        white-space: nowrap;
+        color: #4a5568;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        flex-shrink: 0;
+    }
+
+    .subheading-item:hover {
+        background: rgb(255, 255, 249);
+      }
+    
+    .subheading-item.active{
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    <header id="main-header">
+        <div class="hamburger-menu" id="hamburger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="main-sliding-page" id="main-sliding-page">
+        <button id="close-slider" class="close-slider">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    
+        <div class="mega-menu">
+            <!-- Your menu content -->
+        </div>
+    </div>
+
+
+    <div class="subheading-container">
+        <div class="subheading-nav">
+            <div class="subheading-item active">All Projects</div>
+            <div class="subheading-item">Web Development</div>
+            <div class="subheading-item">Mobile Apps</div>
+            <div class="subheading-item">UI/UX Design</div>
+            <div class="subheading-item">Data Science</div>
+            <div class="subheading-item">Machine Learning</div>
+            <div class="subheading-item">E-commerce</div>
+            <div class="subheading-item">Cloud Solutions</div>
+            <div class="subheading-item">IoT Projects</div>
+            <div class="subheading-item">Blockchain</div>
+            <div class="subheading-item">AI Applications</div>
+            <div class="subheading-item">Game Development</div>
+            <div class="subheading-item">AR/VR</div>
+            <div class="subheading-item">Cybersecurity</div>
+        </div>
+    </div>
+
+    <script src="projectscript.js"></script>
+</body>
+</html>
+
