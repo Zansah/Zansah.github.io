@@ -1,24 +1,24 @@
  const indexData = {
     "carousel": [
         {
-            "image": "photo/carousel/ -108.jpg",
+            "image": "photo/carousel/Cookies on pink.jpg",
             "alt": "Banner",
-            "title": "Pokedex",
+            "title": "Cookie Clicker",
             "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt facere et, facilis necessitatibus expedita perspiciatis quibusdam commodi, obcaecati, sequi quasi fuga blanditiis minus architecto? Voluptatum, corporis. Mollitia doloremque quibusdam dolor?x.",
             "button1Text": "Visit Website",
-            "button1Url": "https://example.com/shop",
+            "button1Url": " https://zansah.github.io/cookie-clicker/",
             "button2Text": "View Code",
-            "button2Url": "https://example.com/replay"
+            "button2Url": "https://github.com/Zansah/cookie-clicker"
         },
         {
-            "image": "photo/carousel/sonicrun.jpg",
+            "image": "photo/carousel/Kakegurui.jpg",
             "alt": "Banner 2",
-            "title": "Sonic Run",
+            "title": "Blackjack",
             "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt facere et, facilis necessitatibus expedita perspiciatis quibusdam commodi, obcaecati, sequi quasi fuga blanditiis minus architecto? Voluptatum, corporis. Mollitia doloremque quibusdam dolor?x.",
             "button1Text": "Visit Website",
-            "button1Url": "https://example.com/shop",
+            "button1Url": "https://zansah.github.io/blackjack/",
             "button2Text": "View Code",
-            "button2Url": "https://example.com/replay"
+            "button2Url": "https://github.com/Zansah/blackjack"
         },
         {
             "image": "photo/carousel/toad.jpg",
@@ -41,19 +41,19 @@
             "button2Url": "https://github.com/Zansah/Memory-Game"
         },
         {
-            "image": "photo/comingSoon.jpg",
+            "image": "photo/carousel/The Jack Tic Tac Toe Board - Blue.jpg",
             "alt": "Banner 5",
-            "title": "Placeholder",
+            "title": "Tic-Tac-Toe",
             "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt facere et, facilis necessitatibus expedita perspiciatis quibusdam commodi, obcaecati, sequi quasi fuga blanditiis minus architecto? Voluptatum, corporis. Mollitia doloremque quibusdam dolor?x.",
             "button1Text": "Visit Website",
-            "button1Url": "https://example.com/shop",
+            "button1Url": "https://zansah.github.io/Tic-Tac-Tie/",
             "button2Text": "View Code",
-            "button2Url": "https://example.com/replay"
+            "button2Url": "https://github.com/Zansah/Tic-Tac-Tie"
         },
         {
-            "image": "photo/comingSoon.jpg",
+            "image": "photo/carousel/sonicrun.jpg",
             "alt": "Banner 6",
-            "title": "Placeholder",
+            "title": "Sonic Run",
             "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt facere et, facilis necessitatibus expedita perspiciatis quibusdam commodi, obcaecati, sequi quasi fuga blanditiis minus architecto? Voluptatum, corporis. Mollitia doloremque quibusdam dolor?x.",
             "button1Text": "Visit Website",
             "button1Url": "https://example.com/shop",
@@ -61,9 +61,9 @@
             "button2Url": "https://example.com/replay"
         },
         {
-            "image": "photo/carousel/ -93.jpg",
+            "image": "photo/carousel/ -108.jpg",
             "alt": "Banner 7",
-            "title": "Placeholder",
+            "title": "Pokedex",
             "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt facere et, facilis necessitatibus expedita perspiciatis quibusdam commodi, obcaecati, sequi quasi fuga blanditiis minus architecto? Voluptatum, corporis. Mollitia doloremque quibusdam dolor?x.",
             "button1Text": "Visit Website",
             "button1Url": "https://example.com/shop",
@@ -209,12 +209,12 @@
     ],
     "fourPanel": [
         {
-            "image": "https://via.placeholder.com/600x400/6c5ce7/ffffff?text=Panel+1",
+            "image": "photo/comingSoon.jpg",
             "alt": "General",
             "subtitle": "PROJECT CATEGORY",
             "title": "GPA Calculator",
             "buttonText": "Explore",
-            "link": "photo/four-window-section/mens fashion inspo.jpg"
+            "link": "#"
         },
         {
             "image": "photo/four-window-section/ -36.jpg",
@@ -222,7 +222,7 @@
             "subtitle": "PROJECT CATEGORY",
             "title": "Pinterest Clone",
             "buttonText": "Explore",
-            "link": "#"
+            "link": "https://zansah.github.io//Mini-pinterest/"
         },
         {
             "image": "photo/four-window-section/weather.jpg",
@@ -230,15 +230,15 @@
             "subtitle": "PROJECT CATEGORY",
             "title": "Weather App",
             "buttonText": "Explore",
-            "link": "#"
+            "link": "https://zansah.github.io/Weather/"
         },
         {
-            "image": "https://via.placeholder.com/600x400/e74c3c/ffffff?text=Panel+4",
+            "image": "photo/four-window-section/colorgen.jpg",
             "alt": "Algorithms",
             "subtitle": "PROJECT CATEGORY",
             "title": "Color Generator",
             "buttonText": "Explore",
-            "link": "#"
+            "link": "https://zansah.github.io/Color-Gen/"
         }
     ]
 };
