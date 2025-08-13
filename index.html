@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zeph's Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+  <div class="logo"></div>
+  <nav>
+    <ul>
+      <li><a href="#hero">INTRODUCTION</a></li>
+      <li><a href="#projects">PROJECTS</a></li>
+      <li><a href="#">RESUME</a></li>
+      <li><a href="#about">CURRICULUM VITAE</a></li>
+    </ul>
+  </nav>
+  <div class="menu-icon"></div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+  <img src="photos/run.jpg" alt="Hero banner" class="hero-image">
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search...">
+    <div class="search-dropdown" id="searchDropdown"></div>
+  </div>
+</section>
+
+<!-- Bottom Bar -->
+<footer class="bottom-bar">
+  <h1>PORTFOLIO</h1>
+  <a href="https://github.com/Zansah" class="book-btn">GitHub</a>
+</footer>
+
+<!-- Introduction Section -->
+<section class="full-page" id="introduction">
+  <h1>Introduction</h1>
+  <p>info</p>
+</section>
+
+<!-- Projects Section -->
+<section class="full-page" id="projects">
+  <div class="projects-header">
+    <h1 class="recent-title">Recent Projects</h1>
+    <div class="project-filter">
+      <select id="projectCategory" class="custom-select">
+        <option value="data">Data Analytics</option>
+        <option value="web">Web Development</option>
+        <option value="ml">Machine Learning</option>
+      </select>
+    </div>
+  </div>
+  <div class="project-grid">
+    <!-- Cards populated by JS -->
+  </div>
+</section>
+
+<div class="to-top" onclick="scrollToTop()">TO THE SURFACE ▲</div>
+
+<script>
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Project data
+  const projectData = {
+    data: [
+      { id: "covid", title: "Covid Geo Analysis", img: "project1.jpg", desc: "Analyzed Covid infection data..." },
+      { id: "sentiment", title: "App Sentiment Study", img: "project2.jpg", desc: "Studied app usage vs sentiment..." },
+      { id: "sales", title: "Sales Forecast", img: "project3.jpg", desc: "Predicted sales trends with high accuracy." },
+      { id: "etl", title: "Retail ETL Pipeline", img: "project4.jpg", desc: "Built scalable ETL for retail analytics." }
+    ],
+    web: [
+      { id: "portfolio", title: "Portfolio Website", img: "web1.jpg", desc: "Responsive portfolio site with HTML/CSS/JS." },
+      { id: "store", title: "E-commerce Store", img: "web2.jpg", desc: "Online shop with checkout system." },
+      { id: "blogcms", title: "Blog CMS", img: "web3.jpg", desc: "Content management system for blogging." },
+      { id: "landing", title: "Landing Page", img: "web4.jpg", desc: "Marketing landing page with forms." }
+    ],
+    ml: [
+      { id: "classifier", title: "Image Classifier", img: "ml1.jpg", desc: "CNN model for image recognition." },
+      { id: "chatbot", title: "Chatbot NLP", img: "ml2.jpg", desc: "Conversational chatbot using transformers." },
+      { id: "stock", title: "Stock Predictor", img: "ml3.jpg", desc: "Predicted market trends using LSTM." },
+      { id: "segment", title: "Customer Segmentation", img: "ml4.jpg", desc: "Clustered customers for marketing." }
+    ]
+  };
+
+  const categorySelect = document.getElementById('projectCategory');
+  const projectGrid = document.querySelector('.project-grid');
+
+  function loadProjects(category) {
+    projectGrid.innerHTML = '';
+    projectData[category].forEach(proj => {
+      const card = document.createElement('a');
+      card.className = 'project-card';
+      card.href = `project.html?id=${proj.id}`;
+      card.innerHTML = `
+        <div class="project-image-container">
+          <img src="${proj.img}" alt="${proj.title}">
+          <div class="project-title">${proj.title}</div>
+        </div>
+        <div class="project-desc">${proj.desc}</div>
+      `;
+      projectGrid.appendChild(card);
+    });
+  }
+
+  loadProjects(categorySelect.value);
+  categorySelect.addEventListener('change', e => loadProjects(e.target.value));
+
+  /*** SEARCH BAR FUNCTIONALITY WITH RECOMMENDED ITEMS ***/
+  const allProjects = Object.values(projectData).flat();
+  const searchInput = document.getElementById('searchInput');
+  const searchDropdown = document.getElementById('searchDropdown');
+  const searchContainer = document.querySelector('.search-container');
+
+  // Choose recommended items (top 5 here)
+  const recommendedProjects = allProjects.slice(0, 5);
+
+  function showDropdown(projects) {
+    searchDropdown.innerHTML = '';
+    if (projects.length === 0) {
+      searchDropdown.innerHTML = '<div class="dropdown-item">No results found</div>';
+    } else {
+      projects.forEach(proj => {
+        const item = document.createElement('div');
+        item.textContent = proj.title;
+        item.classList.add('dropdown-item');
+        item.addEventListener('click', () => {
+          window.location.href = `project.html?id=${proj.id}`;
+        });
+        searchDropdown.appendChild(item);
+      });
+    }
+    searchDropdown.style.display = 'block';
+  }
+
+  searchInput.addEventListener('focus', () => {
+    searchContainer.classList.add('active');
+    if (searchInput.value.trim() === '') {
+      showDropdown(recommendedProjects);
+    }
+  });
+
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.trim().toLowerCase();
+    if (query === '') {
+      showDropdown(recommendedProjects);
+      return;
+    }
+    const filtered = allProjects.filter(proj => proj.title.toLowerCase().includes(query));
+    showDropdown(filtered);
+  });
+
+  searchInput.addEventListener('blur', () => {
+    setTimeout(() => {
+      searchDropdown.style.display = 'none';
+      searchContainer.classList.remove('active');
+    }, 150);
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!searchContainer.contains(e.target)) {
+      searchDropdown.style.display = 'none';
+      searchContainer.classList.remove('active');
+    }
+  });
+</script>
+</body>
+</html>
