@@ -9,21 +9,19 @@
 </head>
 <body>
 
-<!-- Navbar -->
 <header class="navbar">
   <div class="logo"></div>
   <nav>
     <ul>
       <li><a href="#hero">INTRODUCTION</a></li>
       <li><a href="#projects">PROJECTS</a></li>
-      <li><a href="Ansah_Zephaniah_FederalResume-2.pdf">RESUME</a></li>
+      <li><a href="#" onclick="downloadResume(event)">RESUME</a></li>
       <li><a href="#about">CURRICULUM VITAE</a></li>
     </ul>
   </nav>
   <div class="menu-icon"></div>
 </header>
 
-<!-- Hero Section -->
 <section class="hero" id="hero">
   <img src="photos/run.jpg" alt="Hero banner" class="hero-image">
   <div class="search-container">
@@ -32,19 +30,16 @@
   </div>
 </section>
 
-<!-- Bottom Bar -->
 <footer class="bottom-bar">
   <h1>PORTFOLIO</h1>
   <a href="https://github.com/Zansah" class="book-btn">GitHub</a>
 </footer>
 
-<!-- Introduction Section -->
 <section class="full-page" id="introduction">
   <h1>Introduction</h1>
   <p>info</p>
 </section>
 
-<!-- Projects Section -->
 <section class="full-page" id="projects">
   <div class="projects-header">
     <h1 class="recent-title">Recent Projects</h1>
@@ -57,7 +52,7 @@
     </div>
   </div>
   <div class="project-grid">
-    <!-- Cards populated by JS -->
+    <!-- cards will be loaded via JavaScript -->
   </div>
 </section>
 
@@ -113,13 +108,11 @@
   loadProjects(categorySelect.value);
   categorySelect.addEventListener('change', e => loadProjects(e.target.value));
 
-  /*** SEARCH BAR FUNCTIONALITY WITH RECOMMENDED ITEMS ***/
   const allProjects = Object.values(projectData).flat();
   const searchInput = document.getElementById('searchInput');
   const searchDropdown = document.getElementById('searchDropdown');
   const searchContainer = document.querySelector('.search-container');
 
-  // Choose recommended items (top 5 here)
   const recommendedProjects = allProjects.slice(0, 5);
 
   function showDropdown(projects) {
@@ -170,6 +163,19 @@
       searchContainer.classList.remove('active');
     }
   });
+
+  function downloadResume(event) {
+    event.preventDefault();
+    const confirmDownload = window.confirm("Do you want to download my resume?");
+    if (confirmDownload) {
+      const link = document.createElement('a');
+      link.href = 'files/Ansah_Zephaniah_FederalResume-2.pdf'; 
+      link.download = 'ZephaniahAnsah_Resume.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  }
 </script>
 </body>
 </html>
